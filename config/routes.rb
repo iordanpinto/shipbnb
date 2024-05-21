@@ -12,4 +12,4 @@ Rails.application.routes.draw do
 end
 
 
-resources "ships", only: [:index, :show, :new, :create, :destroy]
+resources :ships, only: [:index, :show, :new, :create, :destroy]

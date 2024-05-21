@@ -4,7 +4,7 @@ class ShipsController < ApplicationController
   end
 
   def new
-
+    @ship = Ship.new
   end
 
   def create
@@ -18,5 +18,5 @@ class ShipsController < ApplicationController
   def delete
 
   end
-  
+
 end
