@@ -3,5 +3,6 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :address %>
+  <%= f.input :category, collection: ['Pirate','Passenger','Cruise','Yacht'] %>
   <%= f.submit "Create Ship" %>
 <% end %>
