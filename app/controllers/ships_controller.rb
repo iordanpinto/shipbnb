@@ -13,7 +13,7 @@ class ShipsController < ApplicationController
     if @ship.save
       redirect_to ships_path(@ship)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
 
   end
