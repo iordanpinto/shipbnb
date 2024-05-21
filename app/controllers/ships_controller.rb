@@ -20,6 +20,7 @@ class ShipsController < ApplicationController
 
   def show
     @ship = Ship.find(params[:id])
+    @booking = Booking.new
   end
 
   def delete
@@ -31,6 +32,5 @@ class ShipsController < ApplicationController
   private
   def ship_params
     params.require(:ship).permit(:name, :description, :price, :category, :address)
-
   end
 end
