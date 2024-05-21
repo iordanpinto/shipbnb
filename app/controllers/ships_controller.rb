@@ -1,6 +1,6 @@
 class ShipsController < ApplicationController
   def index
-
+    @ships = Ship.all
   end
 
   def new
@@ -12,7 +12,7 @@ class ShipsController < ApplicationController
   end
 
   def show
-
+    @ship = Ship.find(params[:id])
   end
 
   def delete
