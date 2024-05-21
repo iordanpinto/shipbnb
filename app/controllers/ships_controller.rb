@@ -16,7 +16,8 @@ class ShipsController < ApplicationController
   end
 
   def delete
-
+    @ship = Ship.destroy(params[:id])
+    redirect_to ships_path
   end
 
 end
