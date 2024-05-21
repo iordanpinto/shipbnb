@@ -1,0 +1,13 @@
+<h1>All Ships</h1>
+
+<% @ships.each do |ship| %>
+  <ul>
+  <li>
+  <strong>Name:</strong> <%= ship.name%><br>
+  <strong>Description:</strong> <%= ship.description%><br>
+  <strong>Price:</strong> <%= ship.price%><br>
+  <strong>Address:</strong> <%= ship.address%><br>
+  <strong>Category:</strong> <%= ship.category%><br>
+  </li>
+  </ul>
+<% end %>

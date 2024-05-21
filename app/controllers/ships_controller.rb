@@ -1,6 +1,6 @@
 class ShipsController < ApplicationController
   def index
-
+    @ships = Ship.all
   end
 
   def new
@@ -13,13 +13,13 @@ class ShipsController < ApplicationController
     if @ship.save
       redirect_to ships_path(@ship)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
 
   end
 
   def show
-
+    @ship = Ship.find(params[:id])
   end
 
   def delete
