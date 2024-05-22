@@ -1,16 +1,19 @@
 
+<div>
+  <h1>All Ships</h1>
 
-<div class="container">
-  <h1>Welcome to ShipBnB</h1>
-  <h2>Choose your ship for your next adventure down below!</h2>
-
-  <div class="container">
-    <div class="row">
-      <% @ships.each do |ship| %>
-        <div class="col-md-4">
-          <%= render partial: 'ships/card', locals: { ship: ship } %>
+  <% @ships.each do |ship|  %>
+    <div class="card-trip">
+      <%= cl_image_tag ship.photo.key %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= ship.name %></h2>
+          <p><%= ship.description %></p>
         </div>
-      <% end %>
+        <h2 class="card-trip-pricing">£<%= ship.price %></h2>
+        <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQJkQrg9F6JgVV2kJkGIlg0KVK713-LpWiBHtzejjS2dojGQLtB9tkdtfByVnQAs5CCWavRJnHuyXtBj8clf5M" class="card-trip-user avatar-bordered" />
+
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>

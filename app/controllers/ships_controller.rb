@@ -1,4 +1,5 @@
 class ShipsController < ApplicationController
+
   def index
     @ships = Ship.all
   end
@@ -30,6 +31,7 @@ class ShipsController < ApplicationController
   private
 
   def ship_params
-    params.require(:ship).permit(:name, :description, :price, :category, :address)
+    params.require(:ship).permit(:name, :description, :price, :category, :address, :photo)
+
   end
 end
