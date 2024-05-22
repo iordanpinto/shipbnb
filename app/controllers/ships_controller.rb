@@ -11,11 +11,10 @@ class ShipsController < ApplicationController
     @ship = Ship.new(ship_params)
     @ship.user = current_user
     if @ship.save
-      redirect_to ships_path(@ship)
+      redirect_to ships_path, notice: "Your Ship is Confirmed!!"
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   def show
@@ -28,8 +27,8 @@ class ShipsController < ApplicationController
     redirect_to ships_path
   end
 
-
   private
+
   def ship_params
     params.require(:ship).permit(:name, :description, :price, :category, :address)
   end
