@@ -1,19 +1,9 @@
-<div class="">
-  <h1>All Ships</h1>
 
-  <% @ships.each do |ship| %>
-    <ul>
-      <li>
-        <strong>Name:</strong> <%= ship.name %><br>
-        <strong>Description:</strong> <%= ship.description %><br>
-        <strong>Price:</strong> <%= ship.price %><br>
-        <strong>Address:</strong> <%= ship.address %><br>
-        <strong>Category:</strong> <%= ship.category %><br>
-      </li>
-    </ul>
-  <% end %>
 
-  <h2>Ships in Card Layout</h2>
+<div class="container">
+  <h1>Welcome to ShipBnB</h1>
+  <h2>Choose your ship for your next adventure down below!</h2>
+
   <div class="container">
     <div class="row">
       <% @ships.each do |ship| %>
