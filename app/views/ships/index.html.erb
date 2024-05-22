@@ -1,26 +1,19 @@
+
 <div class="">
   <h1>All Ships</h1>
 
-  <% @ships.each do |ship| %>
-    <ul>
-      <li>
-        <strong>Name:</strong> <%= ship.name %><br>
-        <strong>Description:</strong> <%= ship.description %><br>
-        <strong>Price:</strong> <%= ship.price %><br>
-        <strong>Address:</strong> <%= ship.address %><br>
-        <strong>Category:</strong> <%= ship.category %><br>
-      </li>
-    </ul>
-  <% end %>
-
-  <h2>Ships in Card Layout</h2>
-  <div class="container">
-    <div class="row">
-      <% @ships.each do |ship| %>
-        <div class="col-md-4">
-          <%= render partial: 'ships/card', locals: { ship: ship } %>
+  <% @ships.each do |ship|  %>
+    <div class="card-trip">
+      <img src="" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= ship.name %></h2>
+          <p><%= ship.description %></p>
         </div>
-      <% end %>
+        <h2 class="card-trip-pricing">£<%= ship.price %></h2>
+        <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQJkQrg9F6JgVV2kJkGIlg0KVK713-LpWiBHtzejjS2dojGQLtB9tkdtfByVnQAs5CCWavRJnHuyXtBj8clf5M" class="card-trip-user avatar-bordered" />
+
+      </div>
     </div>
-  </div>
-</div>
+
+  <% end %>
