@@ -1,13 +1,26 @@
-<h1>All Ships</h1>
+<div class="">
+  <h1>All Ships</h1>
 
-<% @ships.each do |ship| %>
-  <ul>
-  <li>
-  <strong>Name:</strong> <%= ship.name%><br>
-  <strong>Description:</strong> <%= ship.description%><br>
-  <strong>Price:</strong> <%= ship.price%><br>
-  <strong>Address:</strong> <%= ship.address%><br>
-  <strong>Category:</strong> <%= ship.category%><br>
-  </li>
-  </ul>
-<% end %>
+  <% @ships.each do |ship| %>
+    <ul>
+      <li>
+        <strong>Name:</strong> <%= ship.name %><br>
+        <strong>Description:</strong> <%= ship.description %><br>
+        <strong>Price:</strong> <%= ship.price %><br>
+        <strong>Address:</strong> <%= ship.address %><br>
+        <strong>Category:</strong> <%= ship.category %><br>
+      </li>
+    </ul>
+  <% end %>
+
+  <h2>Ships in Card Layout</h2>
+  <div class="container">
+    <div class="row">
+      <% @ships.each do |ship| %>
+        <div class="col-md-4">
+          <%= render partial: 'ships/card', locals: { ship: ship } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
