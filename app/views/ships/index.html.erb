@@ -1,10 +1,10 @@
 
-<div class="">
+<div>
   <h1>All Ships</h1>
 
   <% @ships.each do |ship|  %>
     <div class="card-trip">
-      <img src="" />
+      <%= cl_image_tag ship.photo.key %>
       <div class="card-trip-infos">
         <div>
           <h2><%= ship.name %></h2>
@@ -15,5 +15,5 @@
 
       </div>
     </div>
-
   <% end %>
+</div>
