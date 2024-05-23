@@ -39,9 +39,11 @@
 
   <div class="container date-form" style="margin-top: 30px; margin-bottom: 30px; width: 35%;">
   <%= simple_form_for([@ship, @booking]) do |f| %>
-    <hr class="divider">
-    <%= f.input :start_date, label_html: { class: 'bold-label' } %>
-    <%= f.input :end_date, label_html: { class: 'bold-label' } %>
-    <%= f.submit "Create Booking", class: "btn-ghost" %>
+    <div class="d-flex justify-content-center">
+      <hr class="divider">
+    </div>
+      <%= f.input :start_date, label_html: { class: 'bold-label' } %>
+      <%= f.input :end_date, label_html: { class: 'bold-label' } %>
+      <%= f.submit "Create Booking", class: "btn btn-flat" %>
   <% end %>
 </div>
