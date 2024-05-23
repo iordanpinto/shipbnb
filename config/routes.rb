@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
   get "/dashboard", to: "pages#dashboard"
+  patch "booking/:id/accept", to: "bookings#accept", as: "accept"
+  patch "booking/:id/reject", to: "bookings#reject", as: "reject"
 end
