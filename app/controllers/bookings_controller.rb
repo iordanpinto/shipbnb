@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+  # def index
+  #   @user = current_user
+  #   @bookings = Booking.all
+  # end
+
   def create
     @ship = Ship.find(params[:ship_id])
     @booking = Booking.new(booking_params)
