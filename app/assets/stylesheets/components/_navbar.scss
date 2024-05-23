@@ -1,4 +1,9 @@
+
+.navbar-lewagon.sticky-top {
+  z-index: 1030;
+}
 .navbar-lewagon {
+
   justify-content: space-between;
   background: white;
 }
@@ -13,12 +18,16 @@
 
 #website-title {
   display:inline;
-  margin-left: 5px;
   font-size: 25px;
 }
 
 #icon {
-  padding:10px;
+  padding:5px;
+  margin-left: 50px;
+}
+
+#navbarSupportedContent {
+  margin-right: 50px;
 }
 
 #header {
