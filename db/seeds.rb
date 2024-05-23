@@ -18,11 +18,11 @@ User.create!(
   password: 'password',
 )
 
-file = URI.open("https://preview.redd.it/qyi98jfbwqt61.jpg?width=640&crop=smart&auto=webp&s=7d933e4e2679a7d7790fe7a944077df8f46919d3")
+file = URI.open("https://static.wikia.nocookie.net/onepiece/images/b/b1/Thousand_Sunny_Infobox.png/revision/latest?cb=20220904012119g")
 ship = Ship.new(
   name: 'Thousand Sunny',
-  description: 'The second ship of the Straw Hat Pirates in One Piece',
-  price: 500,
+  description: 'The second ship of the Straw Hat Pirates in One Piece, originally built by Franky.',
+  price: 800,
   category: 'Pirate',
   address: 'Grand Line',
   user: User.first
@@ -42,7 +42,7 @@ ship = Ship.new(
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 ship.save
 
-file = URI.open("https://www.merkur.de/assets/images/28/580/28580509-vor-110-jahren-sank-die-titanic-2uea.jpg")
+file = URI.open("https://cdn.balancia.co.id/wp-content/uploads/2023/03/history-of-titanic-1536x1024.jpeg?strip=all&lossy=1&quality=80&webp=80&avif=80&sharp=1&ssl=1")
 ship = Ship.new(
   name: 'Titanic',
   description: 'A British passenger liner that sank in the North Atlantic Ocean',
@@ -61,6 +61,44 @@ ship = Ship.new(
   price: 400,
   category: 'Pirate',
   address: 'Carribean Sea',
+  user: User.first
+)
+ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+ship.save
+
+
+
+file = URI.open("https://static.wikia.nocookie.net/onepiece/images/9/9b/Oro_Jackson_Infobox.png/revision/latest/scale-to-width-down/1000?cb=20210124033241")
+ship = Ship.new(
+  name: 'Oro Jackson',
+  description: 'The legendary ship of the Pirate King, Gol D. Roger, used by the Roger Pirates.',
+  price: 1000,
+  category: 'Pirate',
+  address: 'Unknown',
+  user: User.first
+)
+ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+ship.save
+
+file = URI.open("https://static.wikia.nocookie.net/onepiece/images/4/41/Going_Merry_Infobox.png/revision/latest?cb=20121214234157")
+ship = Ship.new(
+  name: 'Going Merry',
+  description: 'The first ship of the Straw Hat Pirates in One Piece, gifted to them by Kaya.',
+  price: 500,
+  category: 'Pirate',
+  address: 'East Blue',
+  user: User.first
+)
+ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+ship.save
+
+file = URI.open("https://d23.com/app/uploads/2020/06/1180w-600h_01_0834-P2C-21187_R-780x440.jpg")
+ship = Ship.new(
+  name: 'Flying Dutchman',
+  description: 'A legendary ghost ship commanded by Davy Jones in the Pirates of the Caribbean film series. It is said to be cursed to sail the seas forever.',
+  price: 1200,
+  category: 'Pirate',
+  address: 'Unknown',
   user: User.first
 )
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
