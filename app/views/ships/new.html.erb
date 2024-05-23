@@ -3,3 +3,24 @@
 
 <%= render "form", ship: @ship %>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+      var fileInput = document.querySelector('input[type="file"]');
+      if (fileInput.files.length === 0) {
+        event.preventDefault();
+        var alertDiv = document.createElement('div');
+        alertDiv.className = 'alert';
+        alertDiv.textContent = 'Please choose a picture to upload.';
+        alertDiv.style.color = 'red';
+        form.appendChild(alertDiv);
+        setTimeout(function() {
+          form.removeChild(alertDiv);
+        }, 3000);
+      }
+    });
+  });
+</script>
