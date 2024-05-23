@@ -15,21 +15,15 @@
   color: #333;
 }
 
-// Button styles
-.btn {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-
-  &:hover {
-    background-color: #4A4A4A;
-    color:#f2f2f2
-  }
+/* soft grey line */
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin-bottom: 40px;
+  width: 200%;
 }
+
 
 // Form container styles
 .simple_form {

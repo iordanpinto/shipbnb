@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+
+
+
+table {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  border: none;
+
+  th, td {
+    border: none;
+    padding: 30px;
+  }
+}
+
+.bold-label {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
