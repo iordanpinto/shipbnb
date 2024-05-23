@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :ships, only: [:index, :show, :new, :create, :destroy] do
     resources :bookings, only: [:create]
   end
-
+  get "/dashboard", to: "pages#dashboard"
 end

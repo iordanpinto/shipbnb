@@ -1,0 +1,15 @@
+<h1>List</h1>
+<div class="container">
+  <%= @bookings.each do |booking| %>
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title"><%= booking.ship.name %></h2>
+      <p class="card-text"><strong>Description:</strong> <%= booking.ship.description %></p>
+      <p class="card-text"><strong>Price:</strong> <%= booking.ship.price %></p>
+      <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
+      <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
+      </div>
+    </div>
+  <% end %>
+      <%# <p> Total number of Bookings = <%= @bookings.count %>
+</div>
