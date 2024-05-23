@@ -1,6 +1,10 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 1000;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(240, 251, 251, 0.2);
+  border-radius: 10px;
+  margin: 8px;
 }
