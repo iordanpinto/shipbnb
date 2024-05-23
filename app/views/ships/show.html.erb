@@ -1,36 +1,47 @@
 <div class="container" style="margin-top: 30px; width: 75%;">
   <div class="row">
-    <div class="">
+    <div class="col-md-12">
+      <!-- Here is the picture of the ship -->
+      <% if @ship.photo.attached? %>
+        <%= image_tag(url_for(@ship.photo), class: "card-trip-img", alt: @ship.name) %>
+      <% end %>
+      <!-- Name of the ship -->
       <h1><%= @ship.name %></h1>
-      <table class="">
-        <tbody>
-          <tr>
-            <th scope="row">Address</th>
-            <td><%= @ship.address %></td>
-          </tr>
-          <tr>
-            <th scope="row">Description</th>
-            <td><%= @ship.description %></td>
-          </tr>
-          <tr>
-            <th scope="row">Category</th>
-            <td><%= @ship.category %></td>
-          </tr>
-          <tr>
-            <th scope="row">Price</th>
-            <td>$<%= @ship.price %></td>
-          </tr>
-        </tbody>
-      </table>
+
+      <!-- Information about the ship -->
+      <div class="d-flex justify-content-center">
+        <table class="table" style="width: auto;">
+          <tbody>
+            <tr>
+              <th scope="row">Address</th>
+              <td><%= @ship.address %></td>
+            </tr>
+            <tr>
+              <th scope="row">Description</th>
+              <td><%= @ship.description %></td>
+            </tr>
+            <tr>
+              <th scope="row">Category</th>
+              <td><%= @ship.category %></td>
+            </tr>
+            <tr>
+              <th scope="row">Price</th>
+              <td>€<%= @ship.price %></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
+</div>
 
+<!-- Here is the form to create a new booking -->
 
-<div class="container date-form" style="margin-top: 30px; width: 35%;">
-  <%= simple_form_for([@ship,@booking]) do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Create Booking", class:"btn-ghost" %>
+  <div class="container date-form" style="margin-top: 30px; margin-bottom: 30px; width: 35%;">
+  <%= simple_form_for([@ship, @booking]) do |f| %>
+    <hr class="divider">
+    <%= f.input :start_date, label_html: { class: 'bold-label' } %>
+    <%= f.input :end_date, label_html: { class: 'bold-label' } %>
+    <%= f.submit "Create Booking", class: "btn-ghost" %>
   <% end %>
 </div>
