@@ -1,19 +1,25 @@
+<h1>All Ships</h1>
 
-<div>
-  <h1>All Ships</h1>
-
-  <% @ships.each do |ship|  %>
-    <div class="card-trip">
-      <%= cl_image_tag ship.photo.key %>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= ship.name %></h2>
-          <p><%= ship.description %></p>
-        </div>
-        <h2 class="card-trip-pricing">£<%= ship.price %></h2>
-        <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQJkQrg9F6JgVV2kJkGIlg0KVK713-LpWiBHtzejjS2dojGQLtB9tkdtfByVnQAs5CCWavRJnHuyXtBj8clf5M" class="card-trip-user avatar-bordered" />
-
+<div class="container">
+  <div class="row">
+    <% @ships.each do |ship| %>
+      <div class="col-md-4">
+        <%= link_to ship_path(ship), class: "card-trip-link" do %>
+          <div class="card-trip">
+            <% if ship.photo.attached? %>
+              <%= image_tag(url_for(ship.photo), class: "card-trip-img", alt: ship.name) %>
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= ship.name %></h2>
+                <p><%= ship.description %></p>
+              </div>
+              <h2 class="card-trip-pricing">£<%= ship.price %></h2>
+              <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQJkQrg9F6JgVV2kJkGIlg0KVK713-LpWiBHtzejjS2dojGQLtB9tkdtfByVnQAs5CCWavRJnHuyXtBj8clf5M" class="card-trip-user avatar-bordered" />
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

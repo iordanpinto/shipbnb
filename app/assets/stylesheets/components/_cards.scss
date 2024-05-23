@@ -1,13 +1,28 @@
+.card-trip-link {
+  text-decoration: none;
+  color: inherit; /* Ensures the text color remains the same */
+
+  &:hover .card-trip {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensify the shadow on hover */
+  }
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.card-trip > img {
+.card-trip-img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-trip h2 {
@@ -21,7 +36,6 @@
   opacity: .7;
   margin: 0;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 16px;
@@ -37,4 +51,3 @@
   top: -20px;
   width: 40px;
 }
-
