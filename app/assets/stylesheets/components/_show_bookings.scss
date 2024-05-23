@@ -4,26 +4,42 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-
-
+.card-trip-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px, 10px, 0, 0;
+  height: 250px;
+}
 
 table {
   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   width: 100%;
   border-collapse: collapse;
   margin-top: 40px;
   border: none;
 
   th, td {
+
     border: none;
     padding: 30px;
   }
 }
 
+.table-header {
+  font-weight: 500; /* Ändert den Schriftschnitt der Header-Zellen */
+  font-family: 'Poppins', sans-serif;
+}
+.thin-font {
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
 .bold-label {
-  font-weight: bold;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
 }
