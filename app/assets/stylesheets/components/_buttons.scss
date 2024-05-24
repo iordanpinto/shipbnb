@@ -6,7 +6,7 @@
   color: white;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
-  padding: 0.5em 1.5em; /* Verwendet em für die Polsterung */
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 50px;
   background: #303030;
@@ -20,17 +20,16 @@
   color: white;
 }
 
-/* Medienabfragen für unterschiedliche Bildschirmgrößen */
 @media (max-width: 768px) {
   .btn-flat {
-    padding: 0.5em 1em; /* Reduziert die Polsterung auf kleineren Bildschirmen */
-    font-size: 0.9rem; /* Kleinere Schriftgröße auf kleineren Bildschirmen */
+    padding: 0.5em 1em;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 576px) {
   .btn-flat {
-    padding: 0.4em 0.8em; /* Weitere Reduktion der Polsterung auf sehr kleinen Bildschirmen */
-    font-size: 0.8rem; /* Noch kleinere Schriftgröße auf sehr kleinen Bildschirmen */
+    padding: 0.4em 0.8em;
+    font-size: 0.8rem;
   }
 }
