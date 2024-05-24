@@ -1,0 +1,57 @@
+h1, .card-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-trip-img-2 {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-content-2 {
+  flex: 0 0 250px; /* Breite des Bildes */
+  text-align: right;
+}
+
+.card-text, .table-container th, .table-container td {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.table-header {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.thin-font {
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bold-label {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
