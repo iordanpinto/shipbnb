@@ -16,8 +16,8 @@
           <p class="card-text"><strong>Price:</strong> €<%= booking.ship.price %></p>
           <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
           <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
-          <button class="btn btn-primary">Accept</button>
-          <button class="btn btn-primary">Reject</button>
+          <%= button_to "Accept",accept_path(booking),:method => :patch %>
+          <%= button_to "Reject",reject_path(booking),:method => :patch %>
         </div>
         <% if booking.ship.photo.attached? %>
           <div class="image-content-2">

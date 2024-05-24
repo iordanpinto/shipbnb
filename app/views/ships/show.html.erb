@@ -39,6 +39,7 @@
       </div>
 
 <!-- Here is the form to create a new booking -->
+<% if user_signed_in? %>
 <div class="table-container">
     <div class="container date-form" style="margin-top: 30px; margin-bottom: 30px; width: 65%;">
         <hr class="divider">
@@ -51,3 +52,6 @@
     <% end %>
   </div>
 </div>
+<% else %>
+  <h3>Please LogIn To book a ship or Create to create a New Ship</h3>
+<% end %>
