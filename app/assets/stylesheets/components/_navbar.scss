@@ -1,11 +1,33 @@
-
 .navbar-lewagon.sticky-top {
   z-index: 1030;
 }
+
+.navbar {
+  .nav-link {
+    color: #000;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+}
+
+.avatar {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color:#19191a;
+    opacity: 0.8;
+  }
+}
+
 .navbar-lewagon {
 
   justify-content: space-between;
-  background: white;
+  background: rgb(255, 255, 255);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -28,8 +50,4 @@
 
 #navbarSupportedContent {
   margin-right: 50px;
-}
-
-#header {
-
 }
