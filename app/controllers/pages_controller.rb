@@ -12,4 +12,8 @@ class PagesController < ApplicationController
   #   @ships.each do |ship|
   #     ship.bookings.each do |booking|
   end
+
+  def account
+    
+  end
 end

@@ -7,6 +7,16 @@ h1, .card-title {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  background-color: royalblue;
+}
+
 .card-trip-img-2 {
   width: 100%;
   max-width: 100%;
@@ -17,6 +27,14 @@ h1, .card-title {
 .card-body {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+.card-box {
+  border: white;
+  margin-bottom: 70px;
 }
 
 .content-wrapper {
@@ -54,4 +72,17 @@ h1, .card-title {
 .bold-label {
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(253, 253, 253);
+}
+
+.card-title {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
