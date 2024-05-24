@@ -1,34 +1,58 @@
-<h1>List</h1>
+<div class="container" style="margin-top: 30px; width: 75%;">
+  <div class="row">
+    <div class="col-md-12">
+    <h1>Hi name</h1>
 
-<% if @ships_bookings.any? %>
-  <h2>Pending list</h2>
+    <% if @ships_bookings.any? %>
+      <h2>My Ships for Rent</h2>
 
-    <% @ships_bookings.each do |booking| %>
+<% @ships_bookings.each do |booking| %>
   <div class="card">
     <div class="card-body">
-      <h2 class="card-title"><%= booking.ship.name %></h2>
-      <p class="card-text"><strong>Description:</strong> <%= booking.ship.description %></p>
-      <p class="card-text"><strong>Price:</strong> <%= booking.ship.price %></p>
-      <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
-      <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
-      <button class="btn btn-primary">Accept</button>
-      <button class="btn btn-primary">Reject</button>
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h2 class="card-title"><%= booking.ship.name %></h2>
+          <p class="card-text"><strong>Description:</strong> <%= booking.ship.description %></p>
+          <p class="card-text"><strong>Price:</strong> €<%= booking.ship.price %></p>
+          <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
+          <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
+          <button class="btn btn-primary">Accept</button>
+          <button class="btn btn-primary">Reject</button>
+        </div>
+        <% if booking.ship.photo.attached? %>
+          <div class="image-content-2">
+            <%= image_tag(url_for(booking.ship.photo), class: "card-trip-img-2", alt: booking.ship.name) %>
+          </div>
+        <% end %>
       </div>
-    </div>
-  <% end %>
-
-<% else %>
-  <p>No one booked your ships :( </p>
-<% end %>
-<h2>My Bookings</h2>
-<% @bookings.each do |booking| %>
-<div class="card">
-  <div class="card-body">
-    <h2 class="card-title"><%= booking.ship.name %></h2>
-    <p class="card-text"><strong>Description:</strong> <%= booking.ship.description %></p>
-    <p class="card-text"><strong>Price:</strong> <%= booking.ship.price %></p>
-    <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
-    <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
     </div>
   </div>
 <% end %>
+
+    <% else %>
+      <p>No one booked your ships 😞 </p>
+    <% end %>
+  <h2>My Bookings</h2>
+<% @bookings.each do |booking| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h2 class="card-title"><%= booking.ship.name %></h2>
+          <p class="card-text"><strong>Description:</strong> <%= booking.ship.description %></p>
+          <p class="card-text"><strong>Price:</strong> €<%= booking.ship.price %></p>
+          <p class="card-text"><strong>Address:</strong> <%= booking.ship.address %></p>
+          <p class="card-text card-category"><strong>Category:</strong> <%= booking.ship.category %></p>
+        </div>
+        <% if booking.ship.photo.attached? %>
+          <div class="image-content-2">
+            <%= image_tag(url_for(booking.ship.photo), class: "card-trip-img-2", alt: booking.ship.name) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
