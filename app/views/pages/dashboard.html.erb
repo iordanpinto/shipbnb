@@ -4,7 +4,7 @@
     <div class="col-md-12">
 
     <% if @ships_bookings.any? %>
-      <h2>My Ships for Rent</h2>
+      <h2 class="backgroundline">My Ships for Rent</h2>
 
       <% @ships_bookings.each do |booking| %>
         <div class="card-box">
@@ -30,7 +30,7 @@
     <% else %>
       <p>No one booked your ships 😞 </p>
     <% end %>
-  <h2>My Bookings</h2>
+  <h2 class="backgroundline">My Bookings</h2>
 <% @bookings.each do |booking| %>
   <div class="card-box">
     <div class="card-body">
