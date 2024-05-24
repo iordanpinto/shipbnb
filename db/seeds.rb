@@ -24,7 +24,7 @@ ship = Ship.new(
   description: 'The second ship of the Straw Hat Pirates in One Piece, originally built by Franky.',
   price: 800,
   category: 'Pirate',
-  address: 'Grand Line',
+  address: 'Bermuda Triangle',
   user: User.first
 )
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -67,14 +67,13 @@ ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 ship.save
 
 
-
 file = URI.open("https://static.wikia.nocookie.net/onepiece/images/9/9b/Oro_Jackson_Infobox.png/revision/latest/scale-to-width-down/1000?cb=20210124033241")
 ship = Ship.new(
   name: 'Oro Jackson',
   description: 'The legendary ship of the Pirate King, Gol D. Roger, used by the Roger Pirates.',
   price: 1000,
   category: 'Pirate',
-  address: 'Unknown',
+  address: 'Hawaii',
   user: User.first
 )
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -86,7 +85,7 @@ ship = Ship.new(
   description: 'The first ship of the Straw Hat Pirates in One Piece, gifted to them by Kaya.',
   price: 500,
   category: 'Pirate',
-  address: 'East Blue',
+  address: 'Indian Ocean',
   user: User.first
 )
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -98,7 +97,7 @@ ship = Ship.new(
   description: 'A legendary ghost ship commanded by Davy Jones in the Pirates of the Caribbean film series. It is said to be cursed to sail the seas forever.',
   price: 1200,
   category: 'Pirate',
-  address: 'Unknown',
+  address: 'Alfred Faure',
   user: User.first
 )
 ship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
