@@ -1,9 +1,9 @@
-<%= simple_form_for(ship) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :category, collection: ['Pirate','Passenger','Cruise','Yacht'] %>
-  <%=f.input :photo, as: :file %>
-  <%= f.submit "Create Ship", class: "btn btn-flat" %>
+<%= simple_form_for(ship, data: { controller: "picture-validator" }) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: ['Pirate','Passenger','Cruise','Yacht'] %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create Ship", data: { action: "picture-validator#validate" } %>
 <% end %>
