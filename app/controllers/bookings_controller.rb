@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.ship = @ship
     @booking.status = "pending"
     if @booking.save
-      redirect_to ship_path(@booking), notice: "Your Booking is Confirmed!!"
+      redirect_to root_path(@booking), notice: "Your Booking is Confirmed!!"
     else
       render :ships, status: :unprocessable_entity
     end

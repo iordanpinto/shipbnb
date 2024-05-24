@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def dashboard
     @user = current_user
-    @bookings = current_user.bookings
     @ships = current_user.ships
+    @bookings = current_user.bookings
     ship_ids = @ships.pluck(:id)
     @ships_bookings = Booking.where(ship_id: ship_ids )
     #  @bookings = @user.bookings.all
